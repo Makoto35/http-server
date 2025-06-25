@@ -31,7 +31,7 @@ class Server {
         );
         this.threadPool = Executors.newFixedThreadPool(64);
     }
-/*
+
     public void start() {
         try (final var serverSocket = new ServerSocket(port)) {
             while (true) {
@@ -102,7 +102,7 @@ class Server {
         final String response = "Last " + count + " messages";
         sendTextResponse(out, response);
     }
-*/
+
     private void sendTextResponse(BufferedOutputStream out, String text) throws IOException {
         final var content = text.getBytes();
         out.write((
